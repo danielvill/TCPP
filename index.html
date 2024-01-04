@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Proyectos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f3f3f3; /* Un color de fondo suave */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="%23ffffff" d="M0 0h20v20H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20zm20 0h20v20H20V20z"/></svg>');
+        }
+
+        .cen {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="cen">Sistema de Votaciones implementado en una escuela </h1>
+        <h2 class="cen">Puedes dar clic a la derecha o izquierda para poder
+            <br>visualizar todas las imagenes
+        </h2>
+
+        <br>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="carouselImages">
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <script>
+            // Obtén la referencia al elemento del carrusel donde se mostrarán las imágenes
+            const carouselImages = document.getElementById('carouselImages');
+
+            // Ruta de la carpeta que contiene las imágenes
+            const imagePath = 'img/';
+
+            // Array con los nombres de las imágenes que deseas mostrar en el carrusel
+            const imageNames = ['20230714_112450.jpg',
+                '20230714_112453.jpg',
+                '20230714_113926.jpg',
+                '20230714_113930.jpg',
+                '20230714_113947.jpg',
+                '20230714_113955.jpg',
+                '20230714_113958.jpg',
+                '20230714_114012_001.jpg',
+                '20230714_114033.jpg ',
+                '20230714_121236.jpg ',
+                '20230714_121239.jpg',
+                "IMG-20230822-WA0010.jpg",
+                "IMG-20230822-WA0011.jpg",
+                "IMG-20230822-WA0012.jpg",
+                "IMG-20230822-WA0013.jpg",
+                "IMG-20230822-WA0014.jpg",
+                "IMG-20230822-WA0015.jpg",
+                "IMG-20230822-WA0016.jpg",
+                "IMG-20230822-WA0017.jpg",
+                "IMG-20230822-WA0030.jpg",
+                "IMG-20230822-WA0032.jpg",
+                "IMG-20230822-WA0033.jpg",
+                "IMG-20230823-WA0001.jpg",
+                "IMG-20230823-WA0002.jpg",
+                "IMG-20230823-WA0003.jpg",
+                "IMG-20230823-WA0006.jpg",
+                "IMG-20230823-WA0007.jpg"
+            ];
+
+            // Genera los elementos de las imágenes y agrégalos al carrusel
+            imageNames.forEach((imageName, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.classList.add('carousel-item');
+                if (index === 0) {
+                    carouselItem.classList.add('active');
+                }
+                const image = document.createElement('img');
+                image.classList.add('d-block', 'w-100');
+                image.src = imagePath + imageName;
+                image.alt = 'Slide ' + (index + 1);
+                carouselItem.appendChild(image);
+                carouselImages.appendChild(carouselItem);
+            });
+        </script>
+    </div>
+    <br>
+    
+    <div>
+        
+            
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
